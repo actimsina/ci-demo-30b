@@ -4,7 +4,7 @@ export default function Users({ handleDelete }) {
     const [users, setUsers] = useState([])
     const [error, setError] = useState(null)
     useEffect(() => {
-        fetch('http://jsonplaceholder.typicode.com/users')
+        fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
             .catch(() => setError('error fetching data'))
